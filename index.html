@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Square Guess</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Square Guess</h1>
+        <div id="startscreen">
+          <button id="onep">1 Player</button>
+          <button id="twop">2 Players</button>
+          <h2>How To Play</h1>
+          <p>Use the buttons to receive hints and guess the hidden word. Point value is shown in parentheses. Y is counted as a vowel.</p>
+          <h3>One Player</h3>
+          <p>Use the least amount of points as possible to find the computer's word.</p>
+          <h3>Two Players</h3> 
+          <p>Each player must secretly input their word. Using the hints adds points to your opponent. Guess your opponent's word and gain the most points to win.</p>
+        </div>
+        <div id="namescreen" class="hidden">
+         <label for="name1input">enter player 1's name: </label>
+         <input type="text" id="name1input" maxlength="150"/>
+         <label for="name2input" class="twoplayer" >enter player 2's name: </label>
+         <input type="text" id="name2input" maxlength="150" class="twoplayer"/>
+         <button id="submitnamebutton">submit</button>
+        </div>
+        <div id="createwordscreen" class="hidden">
+          <label for="wordinput"><div class="nametext">Player 1</div> enter your word:</label>
+          <div id="wordinput">
+            <!-- <input type="text" id="wordinput" maxlength="150"/>
+            <table id="letterdisplay">
+            </table> -->
+          </div> 
+        </div>
+        <div id="playscreen" class="hidden">
+         <div class="composite">
+          <p class="nametext">Player 1</p><p>'s turn.</p>
+         </div>
+         <div id="eventlog">
+         </div>
+         <div id="wordtest">
+         </div>
+         <br/>
+         <label for="notes">Notes: </label>
+         <br/>
+         <textarea id="notes"></textarea>
+         <br/>
+         <div id="cards"></div>
+         <br/>
+         <div class="composite twoplayer"><p id="name1text">Player 1</p><p>'s Points:&nbsp;</p><p id="p1points">0</p></div>
+         <div class="composite"><p id="name2text">Player 2</p><p>'s Points:&nbsp; </p><p id="p2points">0</p></div>
+        </div>
+        <div id="winscreen" class="hidden">
+          <p id="wintext">X wins!</p>
+          <button id="restartbutton">restart</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="wordgame.js"></script>
+    </body>
+</html>

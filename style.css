@@ -1,0 +1,32 @@
+body {
+    background-color: #272040;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body :not(.composite) {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.composite * {
+    display: inline;
+}
+
+button {
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#namescreen :not(.hidden) {
+    margin-top: 5px;
+    display: block;
+}
+
+#cards * {
+    margin-right: 5px;
+}
+
